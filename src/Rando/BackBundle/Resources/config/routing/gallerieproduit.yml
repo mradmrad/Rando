@@ -1,0 +1,24 @@
+gallerieproduit_index:
+    path:     /
+    defaults: { _controller: "RandoBackBundle:gallerieProduit:index" }
+    methods:  GET
+
+gallerieproduit_show:
+    path:     /{id}/show
+    defaults: { _controller: "RandoBackBundle:gallerieProduit:show" }
+    methods:  GET
+
+gallerieproduit_new:
+    path:     /new
+    defaults: { _controller: "RandoBackBundle:gallerieProduit:new" }
+    methods:  [GET, POST]
+
+gallerieproduit_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RandoBackBundle:gallerieProduit:edit" }
+    methods:  [GET, POST]
+
+gallerieproduit_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RandoBackBundle:gallerieProduit:delete" }
+    methods:  DELETE

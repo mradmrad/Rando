@@ -16,6 +16,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 //            new AppBundle\AppBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
             new Rando\FrontBundle\RandoFrontBundle(),
             new Rando\BackBundle\RandoBackBundle(),
             new FOS\UserBundle\FOSUserBundle(),

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Gallerieproduits list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Imagename</th>
+                <th>Updatedat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for gallerieProduit in gallerieProduits %}
+            <tr>
+                <td><a href="{{ path('gallerieproduit_show', { 'id': gallerieProduit.id }) }}">{{ gallerieProduit.id }}</a></td>
+                <td>{{ gallerieProduit.imageName }}</td>
+                <td>{% if gallerieProduit.updatedAt %}{{ gallerieProduit.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('gallerieproduit_show', { 'id': gallerieProduit.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('gallerieproduit_edit', { 'id': gallerieProduit.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('gallerieproduit_new') }}">Create a new gallerieProduit</a>
+        </li>
+    </ul>
+{% endblock %}

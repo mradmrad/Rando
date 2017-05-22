@@ -1,0 +1,24 @@
+gallerieevent_index:
+    path:     /
+    defaults: { _controller: "RandoBackBundle:gallerieEvent:index" }
+    methods:  GET
+
+gallerieevent_show:
+    path:     /{id}/show
+    defaults: { _controller: "RandoBackBundle:gallerieEvent:show" }
+    methods:  GET
+
+gallerieevent_new:
+    path:     /new
+    defaults: { _controller: "RandoBackBundle:gallerieEvent:new" }
+    methods:  [GET, POST]
+
+gallerieevent_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RandoBackBundle:gallerieEvent:edit" }
+    methods:  [GET, POST]
+
+gallerieevent_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RandoBackBundle:gallerieEvent:delete" }
+    methods:  DELETE

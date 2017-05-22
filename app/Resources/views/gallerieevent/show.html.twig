@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Gallerieevent</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ gallerieEvent.id }}</td>
+            </tr>
+            <tr>
+                <th>Imagename</th>
+                <td>{{ gallerieEvent.imageName }}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if gallerieEvent.updatedAt %}{{ gallerieEvent.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('gallerieevent_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('gallerieevent_edit', { 'id': gallerieEvent.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

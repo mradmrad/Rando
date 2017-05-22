@@ -81,3 +81,14 @@ fos_user:
     from_email:
         address: you@example.com
         sender_name: You
+
+vich_uploader:
+    db_driver: orm # or mongodb or propel or phpcr
+    mappings:
+        uploaded_files:
+            uri_prefix:         web/uploadedfiles
+            upload_destination: '%kernel.root_dir%/../web/uploadedfiles'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+            namer:              vich_uploader.namer_uniqid
