@@ -1,0 +1,341 @@
+<?php
+
+namespace Rando\BackBundle\Entity;
+
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Event
+ *
+ * @ORM\Table(name="event")
+ * @ORM\Entity(repositoryClass="Rando\BackBundle\Repository\EventRepository")
+ */
+class Event
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=255)
+     */
+    private $titre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255)
+     */
+    private $description;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateDebut", type="date")
+     */
+    private $dateDebut;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateFin", type="date", nullable=true)
+     */
+    private $dateFin;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="Prix", type="integer", unique=true)
+     */
+    private $prix;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="nbrParticipant", type="integer")
+     */
+    private $nbrParticipant;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="etat", type="boolean")
+     */
+    private $etat;
+
+    /**
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="gallerieEvent", mappedBy="event", cascade={"persist", "remove"})
+     */
+    private $gallerie;
+
+    /**
+     * var ArrayCollection
+     * @ORM\OneToMany(targetEntity="Rando\BackBundle\Entity\Reclamation", mappedBy="event", cascade={"remove"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $reclamations;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set titre
+     *
+     * @param string $titre
+     *
+     * @return Event
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    /**
+     * Get titre
+     *
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Event
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set dateDebut
+     *
+     * @param \DateTime $dateDebut
+     *
+     * @return Event
+     */
+    public function setDateDebut($dateDebut)
+    {
+        $this->dateDebut = $dateDebut;
+
+        return $this;
+    }
+
+    /**
+     * Get dateDebut
+     *
+     * @return \DateTime
+     */
+    public function getDateDebut()
+    {
+        return $this->dateDebut;
+    }
+
+    /**
+     * Set dateFin
+     *
+     * @param \DateTime $dateFin
+     *
+     * @return Event
+     */
+    public function setDateFin($dateFin)
+    {
+        $this->dateFin = $dateFin;
+
+        return $this;
+    }
+
+    /**
+     * Get dateFin
+     *
+     * @return \DateTime
+     */
+    public function getDateFin()
+    {
+        return $this->dateFin;
+    }
+
+    /**
+     * Set prix
+     *
+     * @param integer $prix
+     *
+     * @return Event
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+    /**
+     * Get prix
+     *
+     * @return int
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * Set nbrParticipant
+     *
+     * @param integer $nbrParticipant
+     *
+     * @return Event
+     */
+    public function setNbrParticipant($nbrParticipant)
+    {
+        $this->nbrParticipant = $nbrParticipant;
+
+        return $this;
+    }
+
+    /**
+     * Get nbrParticipant
+     *
+     * @return int
+     */
+    public function getNbrParticipant()
+    {
+        return $this->nbrParticipant;
+    }
+
+    /**
+     * Set etat
+     *
+     * @param boolean $etat
+     *
+     * @return Event
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+
+        return $this;
+    }
+
+    /**
+     * Get etat
+     *
+     * @return bool
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->gallerie = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->reclamations = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add gallerie
+     *
+     * @param \Rando\BackBundle\Entity\gallerieEvent $gallerie
+     *
+     * @return Event
+     */
+    public function addGallerie(\Rando\BackBundle\Entity\gallerieEvent $gallerie)
+    {
+        $this->gallerie[] = $gallerie;
+
+        return $this;
+    }
+
+    /**
+     * Remove gallerie
+     *
+     * @param \Rando\BackBundle\Entity\gallerieEvent $gallerie
+     */
+    public function removeGallerie(\Rando\BackBundle\Entity\gallerieEvent $gallerie)
+    {
+        $this->gallerie->removeElement($gallerie);
+    }
+
+    /**
+     * Get gallerie
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getGallerie()
+    {
+        return $this->gallerie;
+    }
+
+    /**
+     * Add reclamation
+     *
+     * @param \Rando\BackBundle\Entity\Reclamation $reclamation
+     *
+     * @return Event
+     */
+    public function addReclamation(\Rando\BackBundle\Entity\Reclamation $reclamation)
+    {
+        $this->reclamations[] = $reclamation;
+
+        return $this;
+    }
+
+    /**
+     * Remove reclamation
+     *
+     * @param \Rando\BackBundle\Entity\Reclamation $reclamation
+     */
+    public function removeReclamation(\Rando\BackBundle\Entity\Reclamation $reclamation)
+    {
+        $this->reclamations->removeElement($reclamation);
+    }
+
+    /**
+     * Get reclamations
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getReclamations()
+    {
+        return $this->reclamations;
+    }
+}

@@ -1,0 +1,4 @@
+services:
+#    rando_front.example:
+#        class: Rando\FrontBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

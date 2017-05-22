@@ -1,0 +1,53 @@
+{% extends '@RandoBack/layout.html.twig' %}
+
+{% block backoffice_body %}
+
+
+    <h1>Events list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Datedebut</th>
+                <th>Datefin</th>
+                <th>Prix</th>
+                <th>Nbrparticipant</th>
+                <th>Etat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+            <tr>
+                <td><a href="{{ path('event_show', { 'id': event.id }) }}">{{ event.id }}</a></td>
+                <td>{{ event.titre }}</td>
+                <td>{{ event.description }}</td>
+                <td>{% if event.dateDebut %}{{ event.dateDebut|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if event.dateFin %}{{ event.dateFin|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ event.prix }}</td>
+                <td>{{ event.nbrParticipant }}</td>
+                <td>{% if event.etat %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('event_show', { 'id': event.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('event_edit', { 'id': event.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('event_new') }}">Create a new event</a>
+        </li>
+    </ul>
+{% endblock %}

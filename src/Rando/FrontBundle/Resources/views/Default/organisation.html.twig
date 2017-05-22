@@ -1,0 +1,76 @@
+{% extends '@RandoFront/layout.html.twig' %}
+{% block title %}
+    <title>
+        Acceuil Rando-vous
+    </title>
+{% endblock %}
+
+{% block frontoffice_body %}
+<section>
+    <div class="main-title">
+        <h1>Organisation</h1>
+    </div>
+    <div class="container">
+        <blockquote>
+            <p>Pour rester compétitive dans une vie associative de plus en plus mouvante, une approche modulable et réactive est essentielle dans le mode de gestion de l’association.
+                Pour ce faire, l’association tunisienne des randonneurs est composée
+                d’un comité directeur (présidente, vice président, secrétaire générale et trésorier) et
+                d’un ensemble de départements des métiers supports (communication, formation, sponsoring)
+                et du cœur métier de l’activité  (balisage, topographie).</p>
+        </blockquote>
+    </div>
+    <br/>
+    <div class="container">
+        <div id="carousel-1" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-1" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="{{ asset('assets/img/home_img/mountain.jpg') }}" alt="...">
+                    <div class="carousel-caption">
+                        <h2 class="main-header">Enjoy Adventure</h2>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{{ asset('assets/img/home_img/mountain1.jpg') }}" alt="...">
+                    <div class="carousel-caption">
+                        <h2 class="main-header">Outdoor Experience</h2>
+                    </div>
+                </div>
+                ...
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="element_carousel.html#carousel-1" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="element_carousel.html#carousel-1" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <br/>
+    <div class="container">
+        <blockquote>
+            <p>
+                Ces mêmes compétences réparties dans les différents départements travaillent en Task Force ou Equipe dédiée.<br/>
+                Le principe de cette forme d’organisation est de regrouper pour une période temporaire les compétences de
+                professionnels et/ou experts métiers ayant des fonctions et des métiers différents autour de la réalisation
+                d’un même projet sous la direction d’un responsable que le comité directeur nomme et qui joue un rôle
+                hiérarchique vis-à-vis d’équipiers “détachés ”.
+            </p>
+        </blockquote>
+    </div>
+    <div class="main-title">
+        <h1></h1>
+    </div>
+</section>
+{% endblock %}

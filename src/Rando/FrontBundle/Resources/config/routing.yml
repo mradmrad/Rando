@@ -1,0 +1,36 @@
+index:
+    path:     /app
+    defaults: { _controller: RandoFrontBundle:Default:index }
+mission:
+    path:     /mission
+    defaults: { _controller: RandoFrontBundle:Default:mission }
+organisation:
+    path:     /organisation
+    defaults: { _controller: RandoFrontBundle:Default:organisation }
+randonnee:
+    path:     /randonnee
+    defaults: { _controller: RandoFrontBundle:Default:randonnee }
+detail_randonnee:
+    path:     /detail_randonnee
+    defaults: { _controller: RandoFrontBundle:Default:detail }
+profile:
+    path:     /profile
+    defaults: { _controller: RandoFrontBundle:Default:profile}
+reclamations:
+    path:     /reclamations
+    defaults: { _controller: RandoFrontBundle:Default:reclamations}
+achats:
+    path:     /achats
+    defaults: { _controller: RandoFrontBundle:Default:achats}
+participations:
+    path:     /participations
+    defaults: { _controller: RandoFrontBundle:Default:participations}
+produits:
+    path:     /produits
+    defaults: { _controller: RandoFrontBundle:Default:produits}
+checkout:
+    path:     /checkout
+    defaults: { _controller: RandoFrontBundle:Default:checkout}
+contact:
+    path:     /contact
+    defaults: { _controller: RandoFrontBundle:Default:contact}

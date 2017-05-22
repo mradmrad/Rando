@@ -1,0 +1,485 @@
+{% extends '@RandoFront/layout.html.twig' %}
+{% block title %}
+    <title>
+        Acceuil Rando-vous
+    </title>
+{% endblock %}
+
+{% block frontoffice_body %}
+    <div class="carousel slide carousel-fade with-overlay full-height" id="carousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1" ></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" style="background-image: url('{{ asset('assets/img/trip_detail/6.jpg') }}');">
+            </div>
+            <div class="item" >
+            </div>
+            <div class="item" >
+            </div>
+            <div class="carousel-caption center-txt">
+                <h1 class="main-header">Annapurna Circuit Trek</h1>
+                <hr>
+                <h4 class="sub-header">The Annapurna Circuit is a trek within the Annapurna mountain range of central Nepal. The total length of the route varies between 160–230 km.</h4>
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="#" role="button" data-slide="prev">
+            <span class="icon-arrow-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#" role="button" data-slide="next">
+            <span class="icon-arrow-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="trip-insight">
+            <div class="main-price">
+
+                <a href="{{ path('checkout') }}" class="btn btn-primary btn-lg hvr-sweep-to-right" >Commander</a>
+            </div>
+            <ul class="social-icon">
+                <li><span class="icon-facebook"></span> Share</li>
+                <li><span class="icon-twitter"></span> Tweet</li>
+                <li><span class="icon-google"></span> Google +1</li>
+                <li><span class="icon-pinterest"></span> Pin it</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="trip-detail">
+        <div class="container">
+            <div class="tab-wrap">
+                <ul class="nav nav-tabs" data-toggle="tabs">
+                    <li class="active"><a href="trip_detail.html#overview">Description</a></li>
+                    <li class=""><a href="trip_detail.html#itenary">Programme</a></li>
+                    <li class=""><a href="trip_detail.html#dateprice">Frais de Participation</a></li>
+                    <li class=""><a href="trip_detail.html#reveiws">Info-Line & Paiement :</a></li>
+                </ul>
+
+                <div class="tab-content paper-effect">
+
+                    <div class="tab-pane active" id="overview">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3>Randonné a zaghouen</h3>
+                                <p>
+                                    Une nouvelle aventure, une nouvelle sensation...
+                                    Asia events vous offre une nouvelle aventure à Djebel Zaghouan du côté Sidi Medien..
+                                    On va découvrir ce village berbère de Sidi Medien, les anciennes mines et on fera une très belle
+                                    randonnée afin de découvrir le Djebel Zaghouan.
+                                </p>
+                                <p>
+                                    Djebel Zaghouan, situé dans la partie nord-est de la dorsale tunisienne,
+                                    s’étend sur neuf kilomètres de long et trois de large. On y trouve de nombreuses grottes,
+                                    d’anciennes mines ou des sites archéologiques. Le massif est parcouru par de nombreux sentiers de randonnée,
+                                    des pistes de bergers ou d’anciens chemins de mineurs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="itenary">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3>Randonné a zaghouen</h3>
+                                <br/>
+                                <p>
+                                    -07h00 : Rassemblement devant Ministère du Tourisme<br/><br/>
+                                    -07h30 : Départ vers Zaghouan <br/><br/>
+                                    -09h30 : Arrivée à Zaghouan<br/><br/>
+                                    -Visite du temples des eaux<br/><br/>
+                                    -Visite parc temples des eaux ( Possibilité de pause petit déjeuner) <br/><br/>
+                                    -Randonnée: Sidi Madien Waad « minet Ennaoui »(préparation pour les participants à l'éscalade )<br/><br/>
+                                    -13h00 : Pause déjeuner<br/><br/>
+                                    -Randonnée: Visite du Tunnel<br/><br/>
+                                    -Randonnée: Visite de l’ancienne mine de fer.<br/><br/>
+                                    -Randonnée: Visite du village berbère Sidi Madien.<br/><br/>
+                                    -17H00 : Retour au bus et départ vers Tunis<br/><br/>
+                                    -19H00 : Arrivée à Tunis
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <br>
+
+                                <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="heading1One">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion1" href="trip_detail.html#collapse1One" aria-expanded="true" aria-controls="collapse1One">
+                                                    Règlement intérieur :
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapse1One" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1One">
+                                            <div class="panel-body">
+                                                <ul class="clean-ul">
+                                                    <li><span class="icon-cross"></span><div class="desc">boissons alcoolisées interdites</div></li>
+                                                    <li><span class="icon-cross"></span><div class="desc">il est primordial de suivre les instructions des organisateurs pour des raisons de sécurité</div></li>
+                                                    <li><span class="icon-cross"></span><div class="desc">il faut apporter tous les besoins nutritionnels (biscuit, chips, jus, sandwich)</div></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="dateprice">
+                        <div class="table-responsive-wrap">
+                            <div class="col-sm-6">
+                                <br/>
+                                <p>
+                                    * 25 DT / PERSONNE <br/><br/>
+                                    ===>Prix 25 dinars/Personne Inclus Transport par bus confort + Assurance + Visite Guidé .<br/><br/>
+                                    - Pas de Paiement le Jour de la randonnée<br/><br/>
+                                    - La règle premier payé premier servi sera rigoureusement appliquée. <br/><br/>
+                                    - Les Places sont limitées
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="reveiws">
+                        <div class="review-comment">
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="media-list review-comment">
+                                        <li class="media">
+                                            <div class="media-left">
+                                                <a href="#"><img src="{{ asset('assets/img/team/1-sm.jpg') }}" class="media-object" alt=""></a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading">angelina jolie</h4>
+                                                <div class="rating">
+                                                    <span class="icon-star"></span>
+                                                    <span class="icon-star"></span>
+                                                    <span class="icon-star"></span>
+                                                    <span class="icon-star"></span>
+                                                    <span class="icon-star-empty"></span>
+                                                </div>
+                                                <p>☎ 24170727</p>
+                                            </div>
+                                        </li>
+                                        <li class="media">
+                                            <div class="media-left">
+                                                <a href="trip_detail.html#"><img src="{{ asset('assets/img/team/2-sm.jpg') }}" class="media-object" alt=""></a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading">Sassi ahmed</h4>
+                                                <div class="rating">
+                                                    <span class="icon-star"></span>
+                                                    <span class="icon-star"></span>
+                                                    <span class="icon-star"></span>
+                                                    <span class="icon-star"></span>
+                                                    <span class="icon-star-empty"></span>
+                                                </div>
+                                                <p>☎ 24170727</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="section-title left">
+                    <h4>Reviews &amp; Comments</h4>
+                </div>
+                <ul class="media-list review-comment">
+                    <li>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="blog_single.html#"><img src="{{ asset('assets/img/team/1-sm.jpg') }}" class="media-object" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Kim L. Burney</h4>
+                                <div class="rating">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star-empty"></span>
+                                </div>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="blog_single.html#"><img src="{{ asset('assets/img/team/2-sm.jpg') }}" class="media-object" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Shing Ch'in</h4>
+                                <div class="rating">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star-empty"></span>
+                                </div>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="add-comment">
+                    <div class="form-group">
+                        <label></label>
+                        <textarea class="form-control">Your comment</textarea>
+                        <button class="btn btn-primary">Add Comment</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+
+
+
+            <div class="row">
+                <div class="gallery" id="trip-gallery-1">
+                    <div class="col-sm-3">
+                        <a href="{{ asset('assets/img/trip_detail/1.jpg') }}" class="gallery-item" data-lightbox="trip-detail-gallery" data-title="Lorem ipsum dolor.">
+                            <img src="{{ asset('assets/img/trip_detail/thumb_1.jpg') }}" alt="..." class="img-responsive" >
+                            <div class="hover-overlay">
+                                <span class="icon-search"></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="{{ asset('assets/img/trip_detail/2.jpg') }}" class="gallery-item" data-lightbox="trip-detail-gallery" data-title="Lorem ipsum dolor.">
+                            <img src="{{ asset('assets/img/trip_detail/thumb_2.jpg') }}" alt="..." class="img-responsive">
+                            <div class="hover-overlay">
+                                <span class="icon-search"></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="{{ asset('assets/img/trip_detail/3.jpg') }}" class="gallery-item" data-lightbox="trip-detail-gallery" data-title="Lorem ipsum dolor.">
+                            <img src="{{ asset('assets/img/trip_detail/thumb_3.jpg') }}" alt="..." class="img-responsive">
+                            <div class="hover-overlay">
+                                <span class="icon-search"></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="{{ asset('assets/img/trip_detail/4.jpg') }}" class="gallery-item" data-lightbox="trip-detail-gallery" data-title="Lorem ipsum dolor.">
+                            <img src="{{ asset('assets/img/trip_detail/thumb_4.jpg') }}" alt="..." class="img-responsive">
+                            <div class="hover-overlay">
+                                <span class="icon-search"></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="{{ asset('assets/img/trip_detail/5.jpg') }}" class="gallery-item" data-lightbox="trip-detail-gallery" data-title="Lorem ipsum dolor.">
+                            <img src="{{ asset('assets/img/trip_detail/thumb_5.jpg') }}" alt="..." class="img-responsive">
+                            <div class="hover-overlay">
+                                <span class="icon-search"></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="{{ asset('assets/img/trip_detail/6.jpg') }}" class="gallery-item" data-lightbox="trip-detail-gallery" data-title="Lorem ipsum dolor.">
+                            <img src="{{ asset('assets/img/trip_detail/thumb_6.jpg') }}" alt="..." class="img-responsive">
+                            <div class="hover-overlay">
+                                <span class="icon-search"></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="{{ asset('assets/img/trip_detail/1.jpg') }}" class="gallery-item" data-lightbox="trip-detail-gallery" data-title="Lorem ipsum dolor.">
+                            <img src="{{ asset('assets/img/trip_detail/thumb_1.jpg') }}" alt="..." class="img-responsive">
+                            <div class="hover-overlay">
+                                <span class="icon-search"></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="{{ asset('assets/img/trip_detail/2.jpg') }}" class="gallery-item" data-lightbox="trip-detail-gallery" data-title="Lorem ipsum dolor.">
+                            <img src="{{ asset('assets/img/trip_detail/thumb_2.jpg') }}" alt="..." class="img-responsive">
+                            <div class="hover-overlay">
+                                <span class="icon-search"></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+
+    </div>
+
+
+    <div class="banner white">
+        <div class="container">
+            <div class="section-title center">
+                <h3>Randonnés similaires</h3>
+            </div>
+            <div class="row item">
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="item-grid">
+                        <div class="item-img" style="background-image: url('assets/img/trip_detail/thumb_1.jpg');">
+                            <div class="item-overlay">
+                                <a href="{{ path('detail_randonnee') }}"><span class="icon-binocular"></span></a>
+                            </div>
+                        </div>
+                        <div class="item-desc">
+                            <div class="item-info">
+                                <span class="icon-hard"></span>
+                                <h4 class="title"><a href="{{ path('detail_randonnee') }}">Routeburn Track</a></h4>
+                            </div>
+
+                            <div class="sub-title">
+                                <span class="location">New Zealand</span>
+                                <span class="grade">Difficult</span>
+                            </div>
+
+                            <div class="item-detail">
+                                <div class="left">
+                                    <div class="day"><span class="icon-sun"></span>3 Days</div>
+                                    <div class="night"><span class="icon-moon"></span>2 Nights</div>
+                                </div>
+                                <div class="right">
+                                    <div class="price">USD 121</div>
+                                    <a href="{{ path('detail_randonnee') }}" class="btn btn-primary hvr-sweep-to-right">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="item-grid">
+                        <div class="item-img" style="background-image: url('assets/img/trip_detail/thumb_2.jpg');">
+                            <div class="item-overlay">
+                                <a href="{{ path('detail_randonnee') }}"><span class="icon-binocular"></span></a>
+                            </div>
+                        </div>
+                        <div class="item-desc">
+                            <div class="item-info">
+                                <span class="icon-hard"></span>
+                                <h4 class="title"><a href="{{ path('detail_randonnee') }}">Fitz Roy Trek</a></h4>
+                            </div>
+
+                            <div class="sub-title">
+                                <span class="location">Patagonia, Argentina</span>
+                                <span class="grade">Difficult</span>
+                            </div>
+
+                            <div class="item-detail">
+                                <div class="left">
+                                    <div class="day"><span class="icon-sun"></span>3 Days</div>
+                                    <div class="night"><span class="icon-moon"></span>2 Nights</div>
+                                </div>
+                                <div class="right">
+                                    <div class="price">USD 121</div>
+                                    <a href="{{ path('detail_randonnee') }}" class="btn btn-primary hvr-sweep-to-right">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="item-grid">
+                        <div class="item-img" style="background-image: url('assets/img/trip_detail/thumb_3.jpg');">
+                            <div class="item-overlay">
+                                <a href="{{ path('detail_randonnee') }}"><span class="icon-binocular"></span></a>
+                            </div>
+                        </div>
+                        <div class="item-desc">
+                            <div class="item-info">
+                                <span class="icon-hard"></span>
+                                <h4 class="title"><a href="{{ path('detail_randonnee') }}">Annapurna Circuit</a></h4>
+                            </div>
+
+                            <div class="sub-title">
+                                <span class="location">Nepal</span>
+                                <span class="grade">Difficult</span>
+                            </div>
+
+                            <div class="item-detail">
+                                <div class="left">
+                                    <div class="day"><span class="icon-sun"></span>3 Days</div>
+                                    <div class="night"><span class="icon-moon"></span>2 Nights</div>
+                                </div>
+                                <div class="right">
+                                    <div class="price">USD 121</div>
+                                    <a href="{{ path('detail_randonnee') }}" class="btn btn-primary hvr-sweep-to-right">ReaD More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-book-now" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">ReaD More</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="preview-wrap">
+                        <div class="preview-img" style="background-image: url('{{ asset('assets/img/home_img/mountain.jpg') }}')"></div>
+
+                        <div class="form-wrap">
+                            <form>
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Your Name" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" placeholder="Email Address" value="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="text" class="form-control" placeholder="Phone Number" value="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Duration</label>
+                                    <div class="row">
+                                        <div class="col-sm-6"><input type="text" class="form-control datepicker" placeholder="From" value=""></div>
+                                        <div class="col-sm-6"><input type="text" class="form-control datepicker" placeholder="To" value=""></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Number of Person</label>
+                                    <input type="text" class="form-control" value="2">
+                                </div>
+                                <button class="btn btn-primary hvr-sweep-to-right">ReaD More</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

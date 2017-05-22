@@ -1,0 +1,20 @@
+rando_back_destination:
+    resource: "@RandoBackBundle/Resources/config/routing/destination.yml"
+    prefix:   /destination
+rando_back_event:
+    resource: "@RandoBackBundle/Resources/config/routing/event.yml"
+    prefix:   /event
+rando_back_participation:
+    resource: "@RandoBackBundle/Resources/config/routing/participation.yml"
+    prefix:   /participation
+rando_back_produit:
+    resource: "@RandoBackBundle/Resources/config/routing/produit.yml"
+    prefix:   /produit
+rando_back_reclamation:
+    resource: "@RandoBackBundle/Resources/config/routing/reclamation.yml"
+    prefix:   /reclamation
+
+
+rando_back_homepage:
+    path:     /
+    defaults: { _controller: RandoBackBundle:Default:index }

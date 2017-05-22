@@ -1,0 +1,253 @@
+{% extends '@RandoFront/layout.html.twig' %}
+{% block title %}
+    <title>
+        Acceuil Rando-vous
+    </title>
+{% endblock %}
+
+{% block frontoffice_body %}
+    <section class="page-img" style="background-image: url('{{ asset('assets/img/home_img/mountain.jpg') }}');">
+        <div class="page-img-txt container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1 class="main-head">Rando & Camping</h1>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="post-list">
+                        <div class="post-img" style="background-image: url('{{ asset('assets/img/blog/thumb_1.jpg') }}')">
+                            <div class="item-overlay">
+                                <a href="#"><span class="icon-binocular"></span></a>
+                            </div>
+                        </div>
+                        <div class="post-summary">
+                            <header>
+                                <h4 class="post-title">
+                                    <a href="{{ path('detail_randonnee') }}">Someday This Day</a>
+                                </h4>
+                                <p class="byline author vcard">
+                                    <span class="italic">By</span>&nbsp;
+                                    <a href="#" rel="author">Aaron D. Cullen</a>
+                                    <span class="dot">·</span>
+                                    <span class="updated">August 24, 2015</span>
+                                    <span class="dot">·</span>
+                                    <span class="comments"><i class="fa fa-comment"></i>
+									<a href="#">1 Comment</a>
+								</span>
+                                </p>
+                            </header>
+
+                            <div class="post-excerpt">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eveniet repellat consequatur ratione facere perferendis quaerat quas saepe?
+                            </div>
+                            <a href="{{ path('detail_randonnee') }}" class="btn btn-primary hvr-sweep-to-right">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="post-list">
+                        <div class="post-img" style="background-image: url('{{ asset('assets/img/blog/thumb_2.jpg') }}')">
+                            <div class="item-overlay">
+                                <a href="#"><span class="icon-binocular"></span></a>
+                            </div>
+                        </div>
+                        <div class="post-summary">
+                            <header>
+                                <h4 class="post-title">
+                                    <a href="{{ path('detail_randonnee') }}">Like Nothing I’ve Seen</a>
+                                </h4>
+                                <p class="byline author vcard">
+                                    <span class="italic">By</span>&nbsp;
+                                    <a href="#" rel="author">Keira Hopman</a>
+                                    <span class="dot">·</span>
+                                    <span class="updated">August 24, 2015</span>
+                                    <span class="dot">·</span>
+                                    <span class="comments"><i class="fa fa-comment"></i>
+									<a href="#">No Comment</a>
+								</span>
+                                </p>
+                            </header>
+
+                            <div class="post-excerpt">
+                                Lorem ipsum dolor sit amet, Repudiandae accusamus, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ut qui temporibus tempore ipsa hic similique? Optio, beatae!
+                            </div>
+                            <a href="{{ path('detail_randonnee') }}" class="btn btn-primary hvr-sweep-to-right">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="post-list">
+                        <div class="post-img" style="background-image: url('{{ asset('assets/img/blog/thumb_3.jpg') }}')">
+                            <div class="item-overlay">
+                                <a href="#"><span class="icon-binocular"></span></a>
+                            </div>
+                        </div>
+                        <div class="post-summary">
+                            <header>
+                                <h4 class="post-title">
+                                    <a href="{{ path('detail_randonnee') }}">Every Corner has a Story </a>
+                                </h4>
+                                <p class="byline author vcard">
+                                    <span class="italic">By</span>&nbsp;
+                                    <a href="#" rel="author">Levi Pottinger</a>
+                                    <span class="dot">·</span>
+                                    <span class="updated">August 24, 2015</span>
+                                    <span class="dot">·</span>
+                                    <span class="comments"><i class="fa fa-comment"></i>
+									<a href="#">2 Comment</a>
+								</span>
+                                </p>
+                            </header>
+
+                            <div class="post-excerpt">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis non quisquam minima eum porro, possimus expedita fugit mollitia?
+                            </div>
+                            <a href="{{ path('detail_randonnee') }}" class="btn btn-primary hvr-sweep-to-right">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="post-list">
+                        <div class="post-img" style="background-image: url('{{ asset('assets/img/blog/thumb_4.jpg') }}')">
+                            <div class="item-overlay">
+                                <a href="#"><span class="icon-binocular"></span></a>
+                            </div>
+                        </div>
+                        <div class="post-summary">
+                            <header>
+                                <h4 class="post-title">
+                                    <a href="{{ path('detail_randonnee') }}">No Particular Place to Go</a>
+                                </h4>
+                                <p class="byline author vcard">
+                                    <span class="italic">By</span>&nbsp;
+                                    <a href="#" rel="author">Susan N. Lynch</a>
+                                    <span class="dot">·</span>
+                                    <span class="updated">August 24, 2015</span>
+                                    <span class="dot">·</span>
+                                    <span class="comments"><i class="fa fa-comment"></i>
+									<a href="#">No Comment</a>
+								</span>
+                                </p>
+                            </header>
+
+                            <div class="post-excerpt">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur officiis, excepturi incidunt obcaecati rem! Voluptatum dolorum, animi.
+                            </div>
+                            <a href="{{ path('detail_randonnee') }}" class="btn btn-primary hvr-sweep-to-right">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="post-list">
+                        <div class="post-img" style="background-image: url('{{ asset('assets/img/blog/thumb_5.jpg') }}')">
+                            <div class="item-overlay">
+                                <a href="#"><span class="icon-binocular"></span></a>
+                            </div>
+                        </div>
+                        <div class="post-summary">
+                            <header>
+                                <h4 class="post-title">
+                                    <a href="{{ path('detail_randonnee') }}">Showering in the Ocean</a>
+                                </h4>
+                                <p class="byline author vcard">
+                                    <span class="italic">By</span>&nbsp;
+                                    <a href="#" rel="author">James B. Camacho</a>
+                                    <span class="dot">·</span>
+                                    <span class="updated">August 24, 2015</span>
+                                    <span class="dot">·</span>
+                                    <span class="comments"><i class="fa fa-comment"></i>
+									<a href="#">3 Comment</a> </span>
+                                </p>
+                            </header>
+
+                            <div class="post-excerpt">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non perferendis voluptatibus placeat at commodi veritatis quidem harum, dolores.
+                            </div>
+                            <a href="{{ path('detail_randonnee') }}" class="btn btn-primary hvr-sweep-to-right">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="pagination-wrap">
+                        <span class="total">Total 127</span>
+                        <nav class="pull-right">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="First">First</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><span class="page-link">..</span></li>
+                                <li class="page-item"><a class="page-link" href="#">99</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Last">Last</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="sidebar">
+                        <div class="border-box">
+                            <div class="box-title">Rechercher un rando </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Rechercher">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-primary">Rechercher</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-box">
+                            <div class="box-title">Derniers rando ajouté !</div>
+                            <div class="recent-post-list">
+                                <div class="recent-post">
+                                    <div class="author-img"><img src="{{ asset('assets/img/team/1-sm.jpg') }}" class="media-object" alt=""></div>
+                                    <div class="post-summary">
+                                        <p>Lorem ipsum dolor sit amet, cons adipisicing elit.</p>
+                                        <div class="byline">
+                                            <span class="updated">Aug 24, 2015</span>
+                                            <span class="dot">·</span>
+                                            <span class="italic">By</span>&nbsp;
+                                            <a href="#" rel="author" class="fn">Aaron D. Cullen</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recent-post">
+                                    <div class="author-img"><img src="{{ asset('assets/img/team/2-sm.jpg') }}" class="media-object" alt=""></div>
+                                    <div class="post-summary">
+                                        <p>Lorem ipsum dolor sit amet, cons adipisicing elit.</p>
+                                        <div class="byline">
+                                            <span class="updated">Jan 24, 2015</span>
+                                            <span class="dot">·</span>
+                                            <span class="italic">By</span>&nbsp;
+                                            <a href="#" rel="author" class="fn">Keira Hopman</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="border-box">
+                            <div class="box-title">Categories</div>
+                            <ul class="list">
+                                <li class="cat-item"><a href="#">Creative (2)</a></li>
+                                <li class="cat-item"><a href="#">Design (9)</a></li>
+                                <li class="cat-item"><a href="#">Image (2)</a></li>
+                                <li class="cat-item"><a href="#">Photography (9)</a></li>
+                                <li class="cat-item"><a href="#">Videos (4)</a></li>
+                                <li class="cat-item"><a href="#">WordPress (4)</a></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+    </main>
+{% endblock%}
